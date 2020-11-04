@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Happy!921",
+    "password": null,
     "database": "fitness_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
