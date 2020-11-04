@@ -3,8 +3,7 @@
 ### [Witness](https://witness-the-fitness.herokuapp.com/)
 
 - Team Members: 
-  Toni Rose De Belen, Flory Ann Evia,
-Sam Fullerton, Steve Kavuu
+  Toni Rose De Belen, Flory Ann Evia, Sam Fullerton, Steve Kavuu
 
 
 
