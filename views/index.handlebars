@@ -32,7 +32,14 @@
     </select>
     <label for="calorieField">Calorie Goal</label>
     <textarea placeholder="How many calories do you wish to burn?" id="calorieField"></textarea>
-   <a><input class="button" id="submitButton" type="submit" value="Submit"></a>
+   <input class="button" id="submitButton" type="submit" value="Submit" uk-toggle="target: #my-id">
+   <div id="my-id" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title" id="dataName1"></h2>
+        <h2 class="uk-modal-title" id="dataName2"></h2>
+        <button class="uk-modal-close" type="button"></button>
+    </div>
+</div>
   </fieldset>
 </form>
 </div>
@@ -59,13 +66,16 @@ $("#submitButton").on('click', function(e) {
     calorie: $('#calorieField').val(),
     weight: $('#weightRangeField').val(),
   };
-  console.log(formData);
+ /* console.log(formData);*/
 $.ajax({
   url:"/workouts",
   type: "POST",
   data: formData,
 }).then(function(exercises){
-  console.log(exercises)
+  console.log(exercises) 
+  /*add info here*/
+  $("#dataName1").text(exercises.exercise1.exercise);
+  $("#dataName2").text(exercises.exercise2.exercise);
 })
 
 })
