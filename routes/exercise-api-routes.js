@@ -9,24 +9,49 @@ module.exports = function(app) {
     app.post("/workouts", function (req, res) {
       console.log("we HIT THE ROUTE",req.body);
 
+var id1 = Math.floor(Math.random() * (248 - 1) + 1);
+var id2 = Math.floor(Math.random() * (248 - 1) + 1);
+console.log(id1," ",id2);
 
-      db.Workout.findAll().then(function(results,err ){
+      db.Fitness.findOne({
+        where: {fitnessId: id1
+
+        }
+      }).then(function(results,err ){
         //console.log('data from db!!', results, err)
+      db.Fitness.findOne({
+        where: {fitnessId: id2
 
-        var calorieTotal = 0
-        //var workoutList = []
+        }
+      }).then(function(result2){
+        console.log(result2.dataValues);
 
-        for(var i = 0; i < results.length; i++) {
-            console.log('each dude from DB!!', results[i].dataValues)
-
-            // if (calorieTotal > req.body.calorie) we go over calorieTotal > req.body.calorie
+        if(req.body.weight==="130lb"){
+          console.log(result2.dataValues.weight130+results.dataValues.weight130);
+            var totalCal = result2.dataValues.weight130+results.dataValues.weight130;
+            if(totalCal < req.body.calorie){
+              res.json({
+                exercise1:results, exercise2:result2
+              })
+            }
         }
 
 
-      })
+      });
+        var calorieTotal = 0
+        //var workoutList = []
+
+        // for(var i = 0; i < results.length; i++) {
+        //     console.log('each dude from DB!!', results[i].dataValues)
+
+        //     // if (calorieTotal > req.body.calorie) we go over calorieTotal > req.body.calorie
+        // }
+console.log(results.dataValues);
+
+      });
      
 
-    })
+    });
 
 }
 
