@@ -32,7 +32,7 @@
     </select>
     <label for="calorieField">Calorie Goal</label>
     <textarea placeholder="How many calories do you wish to burn?" id="calorieField"></textarea>
-    <input class="button" type="submit" value="Submit">
+    <input class="button" id="submitButton" type="submit" value="Submit">
   </fieldset>
 </form>
 </div>
@@ -47,3 +47,24 @@
 <div class="footer">
   <p>Footer</p>
 </div>
+
+<script>
+
+// on click for form and then do ajax call!!
+// smack the /workouts route
+$("#submitButton").on('click', function() {
+  var formData = {
+    name: $('#nameField').val(),
+    calorie: $('#calorieField').val(),
+    weight: $('#weightRangeField').val(),
+  }
+$.ajax({
+  url:"/workouts",
+  type: "POST",
+  data: formData,
+})
+
+  console.log("YOu got ciked", formData)
+})
+
+</script>
