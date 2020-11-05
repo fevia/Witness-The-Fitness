@@ -27,11 +27,8 @@ for developing fast and powerful web interfaces.
     - JS style acccess to MySQL database
 6. Express
     - for HTML routing and API queries
-7. 
+
 
 **Future Development**
 - Add a forum so users can discuss exercises if they have any questions or comments to contribute.
-- 
-
-<!-- 8. Amazon AWS
-    - Due to issues with storing images on Heroku, we upload our images to Amazon for file storage -->
+  
