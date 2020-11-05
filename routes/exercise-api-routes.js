@@ -6,6 +6,13 @@ module.exports = function(app) {
         res.render ("index", {})
     })
     
+    app.get("/allExercises", function (req, res) {
+      db.Fitness.findAll({}).then(function(results,err ){ 
+        // console.log(results)
+        res.render("allExercises", results)
+      });
+      });
+
     app.post("/workouts", function (req, res) {
       console.log("we HIT THE ROUTE",req.body);
 
