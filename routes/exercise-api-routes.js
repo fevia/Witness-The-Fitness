@@ -9,11 +9,11 @@ module.exports = function(app) {
     app.get("/allExercises", function (req, res) {
       db.Fitness.findAll({}).then(function(results,err ){ 
         console.log(results.length)
-        var html = "<head><link rel='stylesheet' href='assets/css/style.css'></head><body><h1>This is a heading</h1><p>This is a paragraph.</p></body>";
+        var html = "<head><link rel='stylesheet' href='assets/css/style.css'></head><body><h1>Exercises, Activities, And Sports</h1><p>Feel free to create your own workout plan with an incredible combination of these.</p></body>";
 
-    html += "<table>";
+    html += "<table style='margin:50px'>";
     for (var i = 0; i < results.length; i++) {
-      html += "<tr><th></th><td> Exercise: " + results[i].exercise + "</td><td> Calories burned per lb: " + results[i].calories + "</td></tr>";
+      html += "<tr><th>Exercise</th><th>Calories burned per lb:</th><tr><td>" + results[i].exercise + "</td><td>  " + results[i].calories + "</td></tr>";
     }
     html += "</table>";
 

@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
-var PORT = process.env.PORT || 8070;
+var PORT = process.env.PORT || 8050;
 
 // Set Handlebars as the default templating engine.
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
