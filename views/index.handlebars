@@ -37,7 +37,6 @@
         <input class="button" id="submitButton" type="submit" value="Submit" uk-toggle="target: #my-id">
         <div id="my-id" uk-modal>
           <div class="uk-modal-dialog uk-modal-body">
-            <img src="/assets/images/flo-karr-nCj0zBLIaAk-unsplash.jpg"></img>
             <h1 class="uk-modal-title" id="welcomeUser"></h1>
             <h3 class="uk-modal-title" id="userCalorie"></h3>
             <h3 class="uk-text-normal">Your ideal workout plan includes these following exercises:</h3>
@@ -52,24 +51,24 @@
 
 </div>
 
-<div class="uk-card uk-card-default uk-card-body" style="margin:50px">
+<div class="uk-card uk-card-default uk-card-body" style="margin:70px">
   <h3 class="uk-card-title">Why is it important to have a workout plan?</h3>
   <p>Working out with consistency is important for achieving fitness results. Creating a workout plan will help you to
     achieve greater consistency. A commitment to a regular workout regimen will increase your fitness level, improve
     your health and generate a greater sense of mental well being.</p>
 </div>
 
-<div class="uk-card uk-card-default uk-card-body" style="margin:50px">
+<div class="uk-card uk-card-default uk-card-body" style="margin:70px">
   <h3 class="uk-card-title">What is the recommended calorie goal?</h3>
-  <p>An individual’s calorie needs can be calculated by determining their Basic Metabolic Rate. A BMR is basically the number of calories you would burn if you stayed in bed all day. As you may have noticed, your BMR decreases as you age and your body’s ability to burn energy will gradually slow down.
+  <p>An individual’s calorie needs can be calculated by determining their Basic Metabolic Rate. A BMR is basically the
+    number of calories you would burn if you stayed in bed all day. As you may have noticed, your BMR decreases as you
+    age and your body’s ability to burn energy will gradually slow down.
 
-The formulas for BMR are:
+    The formulas for BMR are:
 
-Women: BMR= 655 + (9.6 * weight [kg]) + (1.8 * height[cm]) – (4.7 * age [years])
-Men: BMR= 66.47 + (13.7 * weight[kg]) + (5 * height[cm]) – (6.8 * age [years])</p>
+    Women: BMR= 655 + (9.6 * weight [kg]) + (1.8 * height[cm]) – (4.7 * age [years])
+    Men: BMR= 66.47 + (13.7 * weight[kg]) + (5 * height[cm]) – (6.8 * age [years])</p>
 </div>
-
-
 
 <script>
 
@@ -93,12 +92,12 @@ Men: BMR= 66.47 + (13.7 * weight[kg]) + (5 * height[cm]) – (6.8 * age [years])
       $("#dataName1").text(exercises.exercise1.exercise);
       $("#dataName2").text(exercises.exercise2.exercise);
       $('#welcomeUser').text("Hi " + $('#nameField').val());
-      $('#userCalorie').text("In order to burn " + $('#calorieField').val() + " calories");
+      $('#userCalorie').text("In order to burn " + $('#calorieField').val() + " calories in one hour");
     })
 
   })
 
-  /*$(".nav-link1").on('click', function (e) {
+  $(".nav-link1").on('click', function (e) {
     e.preventDefault()
     console.log("clicked on link")
 
@@ -110,6 +109,6 @@ Men: BMR= 66.47 + (13.7 * weight[kg]) + (5 * height[cm]) – (6.8 * age [years])
       window.location.replace("/allExercises");
     })
 
-  })*/
+  })
 
 </script>
