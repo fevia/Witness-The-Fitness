@@ -1,96 +1,110 @@
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
-  <ul class="navbar-nav">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link1" href="/allExercises">View All Exercises</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Favorites</a>
-    </li>
-  </ul>
+<nav class="uk-navbar-container uk-navbar uk-navbar-transparent">
+  <div class="uk-navbar-left">
+    <ul class="uk-navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link1" href="/allExercises">View All Exercises</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Favorites</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 <div class="header">
-  <h2>Get fit, Don't quit!</h2>
+  <h2 id="getfit">Get fit, Don't quit!</h2>
 </div>
 
 
 <div class="container">
-<div class="card">
-  <form>
-  <fieldset>
-    <label for="nameField">Name</label>
-    <input type="text" placeholder="Please enter your name" id="nameField">
-    <label for="weightRangeField">Weight range</label>
-    <select id="weightRangeField">
-      <option value="130lb">130lb</option>
-      <option value="155lb">155lb</option>
-      <option value="180lb">180lb</option>
-      <option value="205lb">205lb</option>
-    </select>
-    <label for="calorieField">Calorie Goal</label>
-    <textarea placeholder="How many calories do you wish to burn?" id="calorieField"></textarea>
-   <input class="button" id="submitButton" type="submit" value="Submit" uk-toggle="target: #my-id">
-   <div id="my-id" uk-modal>
-    <div class="uk-modal-dialog uk-modal-body">
-        <h2 class="uk-modal-title" id="dataName1"></h2>
-        <h2 class="uk-modal-title" id="dataName2"></h2>
-        <button class="uk-modal-close" type="button"></button>
-    </div>
-</div>
-  </fieldset>
-</form>
-</div>
-  <div class="row">
-    <div class="column">Why is it important to have a workout plan?</div>
-    <div class="column column-50 column-offset-25">Working out with consistency is important for achieving fitness results. Creating a workout plan will help you to achieve greater consistency. A commitment to a regular workout regimen will increase your fitness level, improve your health and generate a greater sense of mental well being.</div>
+  <div class="card">
+    <form>
+      <fieldset>
+        <label for="nameField">Name</label>
+        <input type="text" placeholder="Please enter your name" id="nameField">
+        <label for="weightRangeField">Weight range</label>
+        <select id="weightRangeField">
+          <option value="130lb">130lb</option>
+          <option value="155lb">155lb</option>
+          <option value="180lb">180lb</option>
+          <option value="205lb">205lb</option>
+        </select>
+        <label for="calorieField">Calorie Goal</label>
+        <textarea placeholder="How many calories do you wish to burn?" id="calorieField"></textarea>
+        <input class="button" id="submitButton" type="submit" value="Submit" uk-toggle="target: #my-id">
+        <div id="my-id" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body">
+            <h1 class="uk-modal-title" id="welcomeUser"></h1>
+            <h3 class="uk-text-normal">Your ideal workout plan includes these following exercises</h3>
+            <h3 class="uk-text-normal" id="dataName1"></h3>
+            <h3 class="uk-text-normal" id="dataName2"></h3>
+            <button class="uk-modal-close" type="button">Good Luck!</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
   </div>
 
 </div>
 
+<div class="uk-card uk-card-default uk-card-body" style="margin:50px">
+  <h3 class="uk-card-title">Why is it important to have a workout plan?</h3>
+  <p>Working out with consistency is important for achieving fitness results. Creating a workout plan will help you to
+    achieve greater consistency. A commitment to a regular workout regimen will increase your fitness level, improve
+    your health and generate a greater sense of mental well being.</p>
+</div>
 
-<div class="footer">
-  <p>Footer</p>
+<div class="uk-card uk-card-default uk-card-body" style="margin:50px">
+  <h3 class="uk-card-title">What is the recommended calorie goal?</h3>
+  <p>An individual’s calorie needs can be calculated by determining their Basic Metabolic Rate. A BMR is basically the number of calories you would burn if you stayed in bed all day. As you may have noticed, your BMR decreases as you age and your body’s ability to burn energy will gradually slow down.
+
+The formulas for BMR are:
+
+Women: BMR= 655 + (9.6 * weight [kg]) + (1.8 * height[cm]) – (4.7 * age [years])
+Men: BMR= 66.47 + (13.7 * weight[kg]) + (5 * height[cm]) – (6.8 * age [years])</p>
 </div>
 
 <script>
 
-// on click for form and then do ajax call!!
-// smack the /workouts route
-$("#submitButton").on('click', function(e) {
-  e.preventDefault()
-  var formData = {
-    name: $('#nameField').val(),
-    calorie: $('#calorieField').val(),
-    weight: $('#weightRangeField').val(),
-  };
- /* console.log(formData);*/
-$.ajax({
-  url:"/workouts",
-  type: "POST",
-  data: formData,
-}).then(function(exercises){
-  console.log(exercises) 
-  /*add info here*/
-  $("#dataName1").text(exercises.exercise1.exercise);
-  $("#dataName2").text(exercises.exercise2.exercise);
-})
+  // on click for form and then do ajax call!!
+  // smack the /workouts route
+  $("#submitButton").on('click', function (e) {
+    e.preventDefault()
+    var formData = {
+      name: $('#nameField').val(),
+      calorie: $('#calorieField').val(),
+      weight: $('#weightRangeField').val(),
+    };
+    /* console.log(formData);*/
+    $.ajax({
+      url: "/workouts",
+      type: "POST",
+      data: formData,
+    }).then(function (exercises) {
+      console.log(exercises)
+      /*add info here*/
+      $("#dataName1").text(exercises.exercise1.exercise);
+      $("#dataName2").text(exercises.exercise2.exercise);
+      $('#welcomeUser').text("Hi " + $('#nameField').val());
+    })
 
-})
+  })
 
-$(".nav-link1").on('click', function(e) {
-  e.preventDefault()
-  console.log("clicked on link")
+  $(".nav-link1").on('click', function (e) {
+    e.preventDefault()
+    console.log("clicked on link")
 
-$.ajax({
-  url:"/allExercises",
-  type: "GET",
-}).then(function(exercises){
-}) 
+    $.ajax({
+      url: "/allExercises",
+      type: "GET",
+    }).then(function (exercises) {
+      //res.redirect("/allExercises", exercises)
+      window.location.replace("/allExercises");
+    })
 
-})
-
+  })
 
 </script>

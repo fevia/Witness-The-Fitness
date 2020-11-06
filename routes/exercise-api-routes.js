@@ -8,7 +8,7 @@ module.exports = function(app) {
     
     app.get("/allExercises", function (req, res) {
       db.Fitness.findAll({}).then(function(results,err ){ 
-        // console.log(results)
+        console.log(results)
         res.render("allExercises", results)
       });
       });
