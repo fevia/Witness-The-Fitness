@@ -1,12 +1,12 @@
 # [Witness-the-Fitness](https://witness-the-fitness.herokuapp.com/)
 
 ## Description 
-Witness-the-Fitness is an app designed to give the user two exercises chosen at random when they enter how many calories they want to burn. All exercises are designed to last 1 full hour. No two days will ever be the same!
+**Witness-the-Fitness** is an app designed to give the user two exercises chosen at random when they enter how many calories they want to burn. All exercises are designed to last 1 full hour. No two days will ever be the same!
 
 
 ## Installation
-When you open the file in VS Code, you will need to run 'npm i' to install the packages provided.
-In your Mysql workbench, create the database "fitness_db". Now inside your integrated terminal, make sure to run *'npm run seeds'* to give your database all the exercise data.
+When you open the file in VS Code, you will need to run **npm i** to install the packages provided.
+In your Mysql workbench, create the database **fitness_db**. Now inside your integrated terminal, make sure to run **npm run seeds** to give your database all the exercise data.
 
 
 ## Usage 
