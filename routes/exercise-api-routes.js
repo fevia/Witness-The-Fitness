@@ -8,8 +8,16 @@ module.exports = function(app) {
     
     app.get("/allExercises", function (req, res) {
       db.Fitness.findAll({}).then(function(results,err ){ 
-        console.log(results)
-        res.render("allExercises", results)
+        console.log(results.length)
+        var html = "<head><link rel='stylesheet' href='assets/css/style.css'></head><body><h1>This is a heading</h1><p>This is a paragraph.</p></body>";
+
+    html += "<table>";
+    for (var i = 0; i < results.length; i++) {
+      html += "<tr><th></th><td> Exercise: " + results[i].exercise + "</td><td> Calories burned per lb: " + results[i].calories + "</td></tr>";
+    }
+    html += "</table>";
+
+        res.send(html)
       });
       });
 
