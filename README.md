@@ -16,6 +16,23 @@ In your Mysql workbench, create the database **'fitness_db'**. Now inside your i
 
 After launching the app, you can insert your name in the box provided. In the drop down menu, choose the closest weight to your current weight. In the calorie goal box, input the amount of calories you want to burn in the span of one hour. If you would like to look at a list of all the exercises provided along with the amount of calories burned per lb, you can access it by the 'All Exercises' link at the top of the page.
 
+## Technologies Used 
+1. Milligram
+    - A minimalistic CSS framework
+2. UI KIT
+   - A lightweight and modular front-end CSS framework
+    for developing fast and powerful web interfaces.
+3. Jquery
+    - Easy access to the DOM for manipluation of screen content
+4. Handlebars Templating
+    - Easy templating engine
+5. Trello
+    - Project management tool
+6. Sequelze
+    - JS style acccess to MySQL database
+7. Express
+    - for HTML routing and API queries
+
 
 ## Credits
 ###### [DeBelen, Toni Rose](https://github.com/tonirose311)
