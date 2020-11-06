@@ -1,4 +1,4 @@
-###### [Witness-the-Fitness](https://witness-the-fitness.herokuapp.com/)
+# [Witness-the-Fitness](https://witness-the-fitness.herokuapp.com/)
 
 ## Description 
 Witness-the-Fitness is an app designed to give the user two exercises chosen at random when they enter how many calories they want to burn. All exercises are designed to last 1 full hour. No two days will ever be the same!
@@ -15,10 +15,10 @@ After launching the app, you can insert your name in the box provided. In the dr
 
 
 ## Credits
-# [DeBelen, Toni Rose](https://github.com/tonirose311)
-# [Evia, Flory Ann](https://github.com/fevia)
-# [Fullerton, Sam](https://github.com/samdfullerton)
-# [Kavuu, Steve](https://github.com/sck916)
+###### [DeBelen, Toni Rose](https://github.com/tonirose311)
+###### [Evia, Flory Ann](https://github.com/fevia)
+###### [Fullerton, Sam](https://github.com/samdfullerton)
+###### [Kavuu, Steve](https://github.com/sck916)
 
 
 ## Future Development
