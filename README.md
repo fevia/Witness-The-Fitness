@@ -23,12 +23,12 @@ After launching the app, you can insert your name in the box provided. In the dr
    - A lightweight and modular front-end CSS framework
     for developing fast and powerful web interfaces.
 3. Jquery
-    - Easy access to the DOM for manipluation of screen content
+    - Easy access to the DOM for manipulation of screen content
 4. Handlebars Templating
     - Easy templating engine
 5. Trello
     - Project management tool
-6. Sequelze
+6. Sequelize
     - JS style acccess to MySQL database
 7. Express
     - for HTML routing and API queries
