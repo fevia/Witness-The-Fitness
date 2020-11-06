@@ -24,8 +24,9 @@ app.set("view engine", "handlebars");
 const db = require("./models");
 
 // Data
-
+// require('./routes/exercise-html-routes')(app)
 require('./routes/exercise-api-routes')(app)
+
 // Routes
 // app.get("/", function (req, res) {
 //     res.render ("index", {})
