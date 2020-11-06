@@ -10,7 +10,8 @@ In your Mysql workbench, create the database "fitness_db". Now inside your integ
 
 
 ## Usage 
-![Screenshot](public/assets/images/userInfo.png)
+![form](public/assets/images/form.png)
+![response](public/assets/images/generated.png)
 
 After launching the app, you can insert your name in the box provided. In the drop down menu, choose the closest weight to your current weight. In the calorie goal box, input the amount of calories you want to burn in the span of one hour. If you would like to look at a list of all the exercises provided along with the amount of calories burned per lb, you can access it by the 'All Exercises' link at the top of the page.
 
