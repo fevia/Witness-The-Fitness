@@ -14,18 +14,20 @@ Sam Fullerton, Steve Kavuu
     
 
 ### Technologies Used: 
-1. UI KIT
+1. Milligram
+    - A minimalistic css framework
+2. UI KIT
    - A lightweight and modular front-end CSS framework
 for developing fast and powerful web interfaces.
-2. Jquery
+3. Jquery
     - Easy access to the DOM for manipluation of screen content
-3. Handlebars Templating
+4. Handlebars Templating
     - Easy templating engine
-4. Trello
+5. Trello
     - Project management tool
-5. Sequelze
+6. Sequelze
     - JS style acccess to MySQL database
-6. Express
+7. Express
     - for HTML routing and API queries
 
 
