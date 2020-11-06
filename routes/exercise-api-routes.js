@@ -9,12 +9,14 @@ module.exports = function(app) {
     app.get("/allExercises", function (req, res) {
       db.Fitness.findAll({}).then(function(results,err ){ 
         console.log(results.length)
-        var html = "<head><link rel='stylesheet' href='assets/css/style.css'></head><body><h1>Exercises, Activities, And Sports</h1><p>Feel free to create your own workout plan with an incredible combination of these.</p></body>";
-
-    html += "<table style='margin:50px'>";
+    var html = "<head>"
+    html += "<style> body {background-image: url(/assets/images/exerciseBG.jpg); background-size: 100% 100%; background-attachment: fixed} tr:hover {background-color: #f5f5f5;} table, th, td {border-bottom: 1px solid #ddd; padding; 15px text-align: center} </style>"
+    html += "</head><body><h1>Exercises, Activities, And Sports<br></h1><p>Feel free to create your own workout plan with an incredible combination of exercises listed below.</p></body>";
+    html += "<table style='width: 50%'>";
+    html += "<tr><th>Exercise</th><th>Calories burned per lb<br>(every hour):</th></tr>";
     for (var i = 0; i < results.length; i++) {
-      html += "<tr><th>Exercise</th><th>Calories burned per lb:</th><tr><td>" + results[i].exercise + "</td><td>  " + results[i].calories + "</td></tr>";
-    }
+    html += "<tr><td>" + results[i].exercise + "</td><td>  " + results[i].calories + "</td></tr>";
+  }
     html += "</table>";
 
         res.send(html)
