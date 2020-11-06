@@ -5,8 +5,8 @@
 
 
 ## Installation
-When you open the file in VS Code, you will need to run **npm i** to install the packages provided.
-In your Mysql workbench, create the database **fitness_db**. Now inside your integrated terminal, make sure to run **npm run seeds** to give your database all the exercise data.
+opWhen you open the file in VS Code, you will need to run **'npm i'** to install the packages provided.
+In your Mysql workbench, create the database **'fitness_db'**. Now inside your integrated terminal, make sure to run **'npm run seeds'** to give your database all the exercise data.
 
 
 ## Usage 
