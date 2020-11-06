@@ -43,6 +43,36 @@ console.log(id1," ",id2);
             }
         }
 
+        if(req.body.weight==="155lb"){
+          console.log(result2.dataValues.weight130+results.dataValues.weight130);
+            var totalCal = result2.dataValues.weight130+results.dataValues.weight130;
+            if(totalCal < req.body.calorie){
+              res.json({
+                exercise1:results, exercise2:result2
+              })
+            }
+        }
+
+        if(req.body.weight==="180lb"){
+          console.log(result2.dataValues.weight130+results.dataValues.weight130);
+            var totalCal = result2.dataValues.weight130+results.dataValues.weight130;
+            if(totalCal < req.body.calorie){
+              res.json({
+                exercise1:results, exercise2:result2
+              })
+            }
+        }
+
+        if(req.body.weight==="205lb"){
+          console.log(result2.dataValues.weight130+results.dataValues.weight130);
+            var totalCal = result2.dataValues.weight130+results.dataValues.weight130;
+            if(totalCal < req.body.calorie){
+              res.json({
+                exercise1:results, exercise2:result2
+              })
+            }
+        }
+
 
       });
         var calorieTotal = 0

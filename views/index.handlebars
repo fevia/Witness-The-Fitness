@@ -38,7 +38,8 @@
         <div id="my-id" uk-modal>
           <div class="uk-modal-dialog uk-modal-body">
             <h1 class="uk-modal-title" id="welcomeUser"></h1>
-            <h3 class="uk-text-normal">Your ideal workout plan includes these following exercises</h3>
+            <h3 class="uk-modal-title" id="userCalorie"></h3>
+            <h3 class="uk-text-normal">Your ideal workout plan includes these following exercises:</h3>
             <h3 class="uk-text-normal" id="dataName1"></h3>
             <h3 class="uk-text-normal" id="dataName2"></h3>
             <button class="uk-modal-close" type="button">Good Luck!</button>
@@ -89,6 +90,7 @@ Men: BMR= 66.47 + (13.7 * weight[kg]) + (5 * height[cm]) – (6.8 * age [years])
       $("#dataName1").text(exercises.exercise1.exercise);
       $("#dataName2").text(exercises.exercise2.exercise);
       $('#welcomeUser').text("Hi " + $('#nameField').val());
+      $('#userCalorie').text("In order to burn " + $('#calorieField').val() + " calories");
     })
 
   })
